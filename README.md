@@ -562,4 +562,92 @@ Em vez de uma imagem, será exibido um **bloco em gradiente** nas bordas.
 
 Para que o `border-image-source` funcione corretamente, é essencial definir um `border-width` com valor maior que `1px`.
 
+
+### `border-image-slice`
+
+A propriedade `border-image-slice` define como uma imagem será dividida para ser usada como borda. A imagem é dividida em 9 partes (semelhante a uma grade 3x3) e distribuída ao redor da borda do elemento.
+
+É recomendável usá-la junto com:
+
+```css
+border-image-repeat: repeat;
+```
+
+### `border-image-repeat`
+
+Define como a imagem será repetida ao longo da borda.
+
+#### Exemplos:
+
+```css
+border-image-repeat: round;
+```
+
+- Ajusta a repetição da imagem na borda para que se encaixe perfeitamente, sem cortes.
+
+```css
+border-image-repeat: space;
+```
+
+- Ajusta a imagem com espaços, dependendo do tamanho do elemento.
+
+Também é possível definir o comportamento separadamente para os eixos horizontal e vertical:
+
+```css
+border-image-repeat: round space;
+```
+
+### `border-image-outset`
+
+Controla a distância (em `px`) entre a borda e a imagem.
+
+É possível definir um valor único ou múltiplos valores para especificar diferentes lados ou eixos:
+
+```css
+border-image-outset: 10px;
+border-image-outset: 10px 5px; /* vertical e horizontal */
+```
+
+---
+
+### Combinando Todas as Propriedades com `border-image`
+
+A propriedade `border-image` pode ser usada para resumir todas as configurações anteriores.
+
+#### Sintaxe Básica:
+
+```css
+border-image: url("caminho/da/imagem.png") slice repeat;
+```
+
+#### Exemplo:
+
+```css
+border-image: url("../image/imagem.png") 169 round;
+```
+
+#### Adicionando Largura:
+
+```css
+border-image: url("caminho/da/imagem.png") slice / largura repeat;
+```
+
+#### Exemplo:
+
+```css
+border-image: url("../image/imagem.png") 169 / 10px round;
+```
+
+### Adicionando Outset:
+
+```css
+border-image: url("caminho/da/imagem.png") slice / largura / outset repeat;
+```
+
+#### Exemplo:
+
+```css
+border-image: url("../image/imagem.png") 169 / 10px / 1 round;
+```
+
 ---
