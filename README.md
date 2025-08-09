@@ -1,14 +1,591 @@
----
-type: Page
-title: CSS
-description: null
-icon: null
-createdAt: '2025-02-06T18:40:04.775Z'
-creationDate: 2025-02-06 15:40
-modificationDate: 2025-06-06 15:58
-tags: []
-coverImage: null
----
+# HTML
+
+HTML é um arquivo de texto de marcação, ele possui tags que são interpretadas pelo navegador para fazer delimitações e funções específicas.
+
+## Inspetor de elementos
+
+O inspetor de elemento é uma ferramenta de desenvolvedor presente nos navegadores, com ele você tem diversas funcionalidades como visualizar o html da página que está sendo acessada.
+
+Para acessa-lo basta apertar f12 ou nas opções do navegador.
+
+
+
+## Como consiste um arquivo html
+
+### Tags
+
+O HTML consiste em 3 partes:
+
+**Tag <html>**: Toda tag possui o sinal de menor <, sinal de maior >  e a tag dentro desses sinais.
+
+Toda tag também possui o seu fechamento:
+
+</html>: Isso é justamente a marcação da linguagem, o **<html>** delimita o início do bloco e o </html> delimita o fim.
+
+<head> e <body>: O body é aquilo que será exibido para o usuário na página, já o head são coisas que não serão exibidas ao usuário na página.
+
+Um exemplo de head seria a tag <title> que é o titulo da página.
+
+ex:
+
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/d215a9a5-d03b-4a16-bae7-34f712ece97f)
+
+É possível observar que o title que fica dentro do head é o titulo da página na aba, já o body se tornou o texto na página
+
+tag <i>: Essa tag deixa o texto em itálico <i>Meu primeiro html</i>
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/45e0a635-6945-4bca-a931-2d916cbefd7a)
+
+tag <strong>: Essa tag deixa o texto em negrito:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/1541bdd3-3c96-4575-a02c-94a28ac213ea)
+
+
+É possível utilizar duas tags ao mesmo tempo, como colocar em negrito e itálico ao mesmo tempo
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/612c5a3c-8251-444a-b0e4-d3e3c240f274)
+
+É possível deixar um texto em strong e apenas uma parte dele em itálico:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/ed60bb5c-c751-4b79-9e80-bbb8d3b30485)
+
+### Tags sem fechamento
+
+É possível ter tags sem fechamento.
+
+Já foi visto que as tags geralmente possuem <tag> de abertura e </tag> de fechamento porém algumas tags podem não ter fechamento.
+
+Um exemplo disso é a tag <input>
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/856b202d-6fc3-4ca4-8ede-3af70fd455a5)
+
+Outra tag pode ser a <img> para inserir imagem.
+
+## Atributos das tags
+
+Como foi visto no caso de <input> existe o "type="text"", esse type é um atributo da tag
+
+Atributos são propriedades que uma tag pode ter, podendo ter atributos mais genéricos (que várias tags podem ter) e atributos mais específicos de cada tag.
+
+#### Atributos gerais
+
+Na tag <strong> por exemplo é possível ter o atributo "id", o id é utilizado para quando for utilizado o JavaScript, a linguagem de programação alterar o conteúdo dele:
+
+<body>
+
+        <strong id="titulo">Meu primeiro <i>html</i></strong>
+
+        <input type="text">
+
+    </body>
+
+Outro exemplo é o atributo style, o style pode ser usado tanto em css quanto JS, mas geralmente em CSS. O CSS é uma forma de formatar o html, mudando seu estilo e aparência:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/250b4a86-5396-40f8-a47a-c025471d896e)
+
+No exemplo <strong style="color: blue">Meu primeiro <i>html</i></strong> é utilizado o style para o css alterar a cor da tag para azul.
+
+Outro atributo gerais das tags é class, ela serve para ser aplicado um determinado estilo css em uma série de tags com essa classe, por exemplo:
+
+<strong class="titulo-principal">Meu primeiro <i>html</i></strong>
+
+Desta forma, toda tag da classe "titulo-principal" terá um determinado comportamento, como uma cor específica, sem precisar colocar um identificador id em todas as tags.
+
+
+
+#### Atributos específicos da tag
+
+Como foi citado, alguns atributos são específicos da tag, no caso do <input> por exemplo, essa tag pode receber inputs de vários tipos, cada um com um formato diferente.
+
+Já foi visto com type-"text", mas também é possível utilizar "number" para o input receber somente numeros, ou "color" para inserir uma cor:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/b65ca268-592d-45fe-a5f5-0fb47b0eac2d)
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/8232f4ab-f55f-4524-ba09-7fdb2721a961)
+
+Outra tag com atributos específicos é a <img>, ela precisa de um atributo chamado "src" que é o caminho da imagem, pode ser um caminho da web ou um caminho da máquina sendo utilizada. 
+
+Exemplo:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/6fba1117-01ca-49bb-aec8-e1d57459b7ce)
+
+Nesse exemplo foi pega uma imagem do google passando o endereço da imagem no atributo "src"
+
+Como foi visto, a imagem ficou muito grande na página, então pode-se usar o atributo "width" para selecionar o tamanho da imagem:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/7c691954-0087-4941-8820-1a56a3f8fc1a)
+
+## Tags de texto
+
+No HTML existe uma variedade imensa de tags de texto, algumas delas são:
+
+tags h(h1,h2,h3,...):
+
+Essa série de tags indicam títulos, no caso H1 seria o titulo, h2 um subtitulo, h3 um titulo dentro do título e assim por diante.
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/7ede2ed5-295c-49a6-8527-05bdcbc349ad)
+
+Já para parágrafos é utilizada a tag<p>:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/64bc8caa-c714-41e5-9c3d-982416c7be32)
+
+OBS: O próprio navegador reconhece as tags e adiciona um determinado espaçamento entre linhas para cada tag e isso pode ser determinado também pelo css.
+
+
+​Para citação é utilizada a tag <blockquote>
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/0286df91-ab13-45e8-a73e-29636e5fa286)
+
+Isso pode ser tanto uma observação quanto uma citação, o navegador ainda adiciona uma margem para essas tasgs.
+
+É possível utilizar <u> para adicionar um underline no texto:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/74e136f1-057e-41a0-8164-80500eed54c7)
+
+Ou mark para deixar com um marca texto:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/b4ae412a-1f4c-46be-8433-68c6c5c91df6)
+
+Ou colocar uma notação no texto com <sup>:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/27f6be47-a606-47d6-8e06-afe0869b5608)
+
+## Listas
+
+Listas é uma forma que o navegador interpreta para separar tópicos, sequencias, entre outros.
+
+O HTML possui duas principais listas, as ordenadas e as não ordenadas.
+
+listas ordenadas são feitas com a tag <ol> </ol>, essa tag em específica não funciona colocando seu conteúdo simplesmente dentro dela, como <ol>Uma lista</ol>.
+
+As listas precisam de uma tag filha, que pode ser <li></li>
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/feee82e4-672b-43b5-9ed7-612875e4c610)
+
+Também sendo possível colocar uma lista dentro de outra lista:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/adbc1bc6-e62b-42f8-9f0b-528d3ceb76da)
+
+Já a lista não ordenada ela tem itens apenas com marcadores, sem numera-los ou ordena-los utilizando a tag <ul> invés de <ol>:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/82482978-8383-427d-afcd-b6c7afae4b79)
+
+A lista não ordenada geralmente é utilizada junto ao css para fazer menus.
+
+## Links
+
+Geralmente em sites existem links para se redirecionar a outra página web, issoo pode ser feito utilizando a tag <a>, nela você adiciona o atributo "href" que recebe o link da outra página, já o conteúdo dentro da tag é um texto que vai ser clicado:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/ce58d32f-622d-4c27-ae5c-3848c21ac751)
+
+Assim, na mesma aba você é redirecionado a outra página web, um atributo que pode ser utlizado para definir o comportamento de onde será aberta a página quando clicar no link, se na mesma aba ou numa nova é o target=
+
+Por padrão, o target é "self", e pode ser explicitado isso, mas pode também ser como "_blank" o link é aberto numa nova aba
+
+<a href="[http://dio.me](http://dio.me)" target="_blank">Dio</a>
+
+Outro atributo da tag <a> é o title=, ele serve para adicionar um tooltip no link, que é ao passar o cursor do mouse em cima do link aparece uma mensagem por exemplo.
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/9123b4d8-7901-4328-8ef6-6af1d078e47e)
+
+É possível transitar entre duas páginas html
+
+Em index:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/b7179f4a-6218-4453-bace-09cdb37fd324)
+
+Em about:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/ac623572-3ea3-4e11-8e7c-3ddf949d4367)
+
+# Formulários html
+
+Formulários é a base para preencher campos e trabalhar com dados em html
+
+para criar formulários, primeiramente é utilizada a tag <form>, porém
+
+O código puramente assim
+
+</head>
+
+<body>
+
+    <form>
+
+        Este é o formulário
+
+    </form>
+
+</body>
+
+</html>
+
+não gerará um formulário, pois a tag form no html precisa da tag de input
+
+Agora com a tag input:
+
+<body>
+
+    <form>
+
+        Nome: <input type="text" name=""><br>
+
+        Idade: <input type="number" name=""><br>
+
+        Senha: <input type="password    " name=""><br>
+
+    </form>
+
+</body>
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/68a4ca60-daa5-44f8-8150-7b7ce1ad8071)
+
+Também é possível usar a tag <button> com o atributo "type" como submit
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/c6a61ffc-60f1-4712-a6d8-46607a8b245a)
+
+    <form>
+
+        Nome: <input type="text" name=""><br>
+
+        Idade: <input type="number" name=""><br>
+
+        Senha: <input type="password    " name=""><br>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+Assim já se obtem um formulário, conseguindo inserir texto no Nome, números no campo idade e senha com **** no campo Senha. Além de ter um botão de enviar.
+
+Também pode se colocar nome no formulário, com <form name\="signup"\>, essa nomeação servirá para identificar os elementos com o JavaScript também para fazer validações.
+
+Também é possível adicionar o atributo action= que recebe o endereço onde será enviado o formulário.
+
+Outro método para o form é o method=, que recebe os métodos de api do protocolo http (get,post,put,delete), ex:
+
+<form name\="signup" method\="GET" action\="#"\>
+
+Quando o formulário for preenchido, a url mudará para:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/27be0df4-7861-45d2-be68-2e51492c605f)
+
+Ou seja, ele já deixará um query/json pronta para consultar na api/banco de dados. Um detalhe é que a senha apareceu na url, o que é inseguro, pois o certo é colocar a senha em um método post.
+
+O método post manda a requisição por um body que não utiliza a url.
+
+Outro atributo é o target, que funciona igual ao target de abrir um link, quando clicar no button a consulta será feita em uma nova aba.
+
+Outro atributo é o autocomplete, ele recebe "on" ou "off", basicamente ele onn faz com que quando o usuário volte a página do formulário ele não precise colocar as credenciais todas novamente, só a senha.
+
+É possível adicionar um evento, para isso existem os atribuitos on..., que fala como a tag vai se comportar ao fazer alguma ação, por exemplo:
+
+onsubmit="alert('Enviei o form')"
+
+Ao clicar em submit ele exibe um alerta dizendo que enviou o formulário:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/a44b1254-8d06-4500-873f-6af19842d121)
+
+Isso pode ser utilizado por exemplo para "formulário".
+
+# Tag input
+
+A tag input possui o atributo type, que são os tipos de input para essa tag, alguns são:
+
+text = campo de texto comum
+
+number = O tipo numero, o navegador já cria uma setinha para adicionar ou subtrair números, que pode ser controlada, ex
+
+<label>Number:</label><input type="number" min="0" max="99" step="5">
+
+Aqui o min determina que o minimo que a seta chega é zero, sem números negativos
+
+max determina que o máximo do campo é 99
+
+step determina que a seta vai aumentar de 5 em 5 numeros.
+
+Button = Um botão para fazer alguma ação, geralmente enviar o formulário
+
+O tipo button cria um botão, mas da mesma forma é possível utilizar a tag <button>
+
+ <label>Button:</label><input type="button" value="ENviar">
+
+<button type="button">Enviar</button>
+
+Ambos são iguais.
+
+range = Um controlador para definir algum range numérico:
+
+<label>Range:</label><input type="range" min="0" max="100" value="10">
+
+min diz que o minimo dele é 0 e max que o máximo é 100
+
+value determina que ele comece em 10 por padrão, na página:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/2eb2b3d6-d905-4d67-92c6-f8760f39278d)
+
+color = Abre um editor de cor
+
+<label>Color:</label><input type="color">
+
+email = Ao enviar o formulário esse campo adiciona um popup caso não haja @:
+
+ <label>Button:</label><input type="submit" value="ENviar"><br>
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/8e0701b0-bdaa-4ce0-9f5e-da1ef3232d61)
+
+url = Faz a mesma coisa que o atributo email só que para formatar url colocando também o http:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/518ecee0-9bc5-4914-924b-c2f401c656f9)
+
+date = Possíbilita um calendário para selecionar a data:
+
+ <label>Date:</label><input type="date"><br>
+
+week = Permite selecionar o número da semana, com um calendário do lado (apenas no chrome e edge)
+
+        <label>week:</label><input type="week"><br>
+
+month = Permite selecionar o mês e o ano, ex: outubro de 2019, com um calendário:
+
+        <label>month:</label><input type="month"><br>
+
+checkbox = Uma caixinha para seleção (true e false):
+
+        <label>Checkbox:</label><input type="checkbox"><br>
+
+radio = Quando colocado duas tags radio você seleciona ou um ou outro, semelhante ao checkbox mas aqui a escolha é única:
+
+        <label>radio:</label><input type="radio" name="aceita"><input type="radio" name="aceita"><br>
+
+lembrando que para isso precisa estar um do lado do outro e com a tag "name"
+
+<body>
+
+    <form>
+
+        <label>Text:</label><input type="text"><br>
+
+        <label>Number:</label><input type="number" min="0" max="99" step="5"><br>
+
+        <label>Button:</label><input type="button" value="ENviar"><br>
+
+        <label>Range:</label><input type="range" min="0" max="100" value="10"><br>
+
+        <label>Color:</label><input type="color"><br>
+
+        <label>E-mail:</label><input type="email"><br>
+
+        <label>URL:</label><input type="url"><br>
+
+        <label>Date:</label><input type="date"><br>
+
+        <label>week:</label><input type="week"><br>
+
+        <label>month:</label><input type="month"><br>
+
+        <label>radio:</label><input type="radio" name="aceita"><input type="radio" name="aceita"><br>
+
+        <label>Button:</label><input type="submit" value="ENviar"><br>
+
+    </form>
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/124a488b-1565-41c6-a1f1-5af07c084fe1)
+
+
+## Checkbox e radio
+
+Dois tipos de inputs muito importantes são de checkbox e radio, pois eles precisam de algumas lógicas e formatações específicas a serem seguidas.
+
+
+
+### Campo name em checkbox
+
+No seguinte formato, em todos os checkbox o campo name possui o mesmo valor e o campo value possui os seus valores respectivos de texto:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/fa9fbdb9-1a4d-4a56-a8f4-84a9902528b3)
+
+Porém, ao selecionar esses campos no checkbox e enviar o formulário, o modelo gerado é o seguinte:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/0db47916-2431-4a81-b07b-f4db61969f1c)
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/81931aa2-f252-4fef-8b2d-27e8cb4452cc)
+
+Todos os atributos/chaves estão como opcional, isso significa que no momento que isso for mandado a api do backend, ele pegará apenas o último valor "azeitona", pois todos são iguais.
+
+A forma de corrigir isso, seria da seguinte forma:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/d319aa3b-f6bd-4a6c-b1ff-73e52edd744f)
+
+Utilizando o método post invés de get e ao lado de opcional colocar colchetes [], assim o backend entende que será passado uma lista de $opcional['queijo','cebola','azeitona'']
+
+
+
+Um outro problema pode ser no radio, se o atributo name for igual, ele permitira selecionar as duas opções
+
+Ou seja, é imprescindível que seja adicionado name= e value= para os campos de input.
+
+
+
+## Button
+
+A tag button pode ter diversos comportamentos utilizando o atributo type como button e os atributos on..., por exemplo onmouseover= acontecerá algo ao passar o mouse em cima do botão (essas coisas podem ser feitas com qualquer elemento usando html)
+
+Se o type do button for "reset" ele limpa os campos do formulário
+
+Já o type submit ele envia o formulário para algum lugar. Ele também gera na url dados de atributos "index.html?name=dfds&age=-9&password=fdsf". O formulário trabalha junto com o button com tipo submit, pois é possível utilizar um atributo no FORMULÁRIO (tag form) chamada onsubmit, para validar  os campos por exemplo.
+
+No formulário <form> é possível usar o atributo onsubmit ou outra orientação a enventos, que pode ser feita alguma ação a partir do formulário antes de enviar de fato (isso quando clicar no botão de submit
+
+
+
+### Select
+
+Select box é um campo que tem uma lista pré definidas com opções para input.
+
+Um exemplo de caso é um campo "cargo", geralmente em cargo você já tem opções pré definidas como desenvolvedor frontend, desenvolvedor fullstack, etc.
+
+
+
+```html
+<body>
+    <form onsubmit="" method="get">
+        <label>Cargo:</label>
+        <select name="role">
+            <option value="">Selecione o cargo</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="gerente">Gerente</option>
+            <option value="diretor">Diretor</option>
+        </select>
+
+    </form>
+</body>
+```
+
+O select geralmente possui um nome, no caso role e a tag <option> para auxiliar, as opções tem as opções a serem escolhidas, essa tag ainda precisa do atributo value= para saber o valor que será mandado ao backend. Ficando assim:
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/406f35b4-d39b-43a7-b818-95ca51a7031f)
+
+Essa tag é muito importante para o javascript, principalmente em relação ao campo "onsubmit" do form.
+
+### textarea
+
+Essa tag serve como uma caixa de texto para textos mais longos. O tamanho dessa caixa pode ser editado pelo usuário ou determinado pelo html.
+
+
+
+## Estruturando e formatando o HTML
+
+Uma das coisas mais importantes quando se fala de HTML é estruturar de uma forma que fique fácil de fazer alterações e compreender o que está sendo feito.
+
+Quando for ser aplicado o CSS por exemplo o html já deve estar estruturado corretamente.
+
+### Formatação
+
+Além disso o HTML deve ser semântico, que é basicamente o HTML ter a interpretação da mensagem que deve ser passada. Por exemplo usar a tag <strong> ou invés de <b> para deixar em negrito, isso devido a em alguns casos o texto em negrito carregar uma outra entonação além de apenas deixar o texto escuro e destacado.
+
+É possível também formatar o html utilizando a tag <font>
+
+a tag font tem alguns atributos:
+
+color= definir a cor, ex color="red"
+
+face= seria a fonte do caractere, ex face="arial"
+
+o atributo face também pode receber mais de uma fonte, para caso o usuário não tenha aquela primeira fonte em seu navegador, ex: face= "arial, Trebuchet"
+
+### Estrutura
+
+A principal forma de estruturar a página html é com a tag div e a tag span
+
+<div> - A tag div serve para separar a página em blocos, dividindo a tela em partes de conteúdo.
+
+Geralmente ela não possui atributos, apenas o id para ser identificada pelo Java Script, uma forma de iniciar a desenvolver uma página é pela estrutura das divs (onde ficará o menu, tamanho do cabeçalho, conteúdo, etc)
+
+A div é considerada uma tag do tipo display-block, o que significa que ela ocupa a tela inteira horizontalmente
+
+<span> - A tag span é semelhante a div, mas ela separa apenas o elemento que está dentro dessa tag. Por exemplo: É possível colocar na tag span apenas um caractere para fazer uma ação específica "frase para <span>colocar</span> o span".
+
+
+
+<fieldset> - Essa tag serve para fazer uma separação visível do bloco e possibilitando colocar uma legenda colocando uma tag <legend>
+
+[image](https://app.capacities.io/78c08dc6-c06f-4366-8edd-ba7149376027/1928c85f-644e-4875-a69f-492eafcecdfa)
+
+
+<video> - Uma tag para colocar videos (ex: mp4)
+
+<iframe> - Utilizada para colocar uma outra página/site dentro da sua página, possíbilitando a navegação em duas páginas, uma dentro da outra.
+
+
+
+## Html Semântico
+
+Semântica quando relacionada ao HTML é devenvolver uma página com tags que façam sentido. Por exemplo, anteriormente em páginas era muito comum encontrar muitas divs para estruturar o código.
+
+Porém, com o html semântico, a melhor prática é estruturar a página com as suas respectivas tags (header, main, footer).
+
+Isso pode contribuir de diversas formas para a página web, com acessibilidade e Web Scraping.
+
+Web Scraping - É coletar dados da página web com algum robô (selenium por exemplo).
+
+
+
+### Header, main e footer
+
+Header é o cabeçalho
+
+Main é a tag onde ficará o foco principal da página. Não pode ser usado duas vezes na mesma página. Ela deve ser filha apenas de uma div ou de uma body
+
+footer o rodapé
+
+
+
+#### Nav, Aside e section
+
+section - Semelhante a div, separa sessões da página
+
+aside - é um conteúdo separado do conteúdo principal da página. Nunca deve ser usado para texto entre parêntese. Pode ser usado em uma barra lateral ou um box com biografia dou autor.
+
+nav - é uma sessão de navegação, onde devem ficar os links como por exemplo links para outras páginas, "sobre nós", etc. geralmente é usado lista não ordenada como tag filha.
+
+
+
+#### Article, blockquote e q
+
+article - É uma tag para colocar o artigo da página. Ele pode possuir aninhamento com vários articles. Pode ser utilizado junto com a tag  <time> com o atributo "datetime" ou "pubdate" para definir a data de publicação do artigo.
+
+blockquote - É uma tag utilizada para citação, por exemplo: Possui um parágrafo (tag "p") falando sobre um tema, logo em seguida a citação desse parágrafo. Podendo colocar fonte atravéz do atributo  "cite="
+
+q - Uma citação apenas para um trecho específico, podendo também utilizar "cite="
+
+
+
+#### Figure, Figcaption e Picture
+
+figure - A tag figure serve como uma div container. Dentro dela é usada a tag <figcaption> que serve como legenda para uma imagem colocada anteriormente com a tag <img>
+
+picture - A tag picture é parecida com a figure, mas com essa é possível utilizar uma tag <source> e passar alguns atributos para ela, que são "srcset=" e "media=". Isso serve para definir uma outra imagem em "srcset" que será renderizada quando o tamanho minimo de "media" por exemplo "media="(min-width: 600 px)"" então quando a tela do dispositivo no navegador estiver menor que 600 pixels, o navegador trocará a imagem definida na tag <img> para a tag definida no atributo "srcset=" da tag source.
+
+#### SEO
+
+SEO (Search Engine Optimization / Otimização para mecanismos de busca)
+
+O SEO engloba um conjunto de técnicas para otimizar o posicionamento do site em mecanismos de buscas.
+
+Uma boa forma de avaliar como está o SEO do seu site é o Google Search Console. Nele possui métricas para avaliar as buscas e os acessos do seu site.
+
+dicas para SEO:
+
+Utilizar de 50 a 60 caracteres na tag title da página.
+
+Usar a tag meta na headers da página com o atributo "name=" como "description" e a tag "content=" com alguma descrição.
+
+usar o site Schema.org
+
+
+# CSS
 
 Introduzindo CSS do básico ao avançado.
 
@@ -1583,6 +2160,3 @@ passado o tamanho de cada lado da borda, a cor e um desfoque para a borda.
 ### Propriedade text-shadow
 
 Também se pode colocar sombra nos textos. Em um h2 por exemplo e ele funcionará de forma semelhante ao box-shadow
-
-
-
